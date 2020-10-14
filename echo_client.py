@@ -27,6 +27,7 @@ def client(msg, log_buffer=sys.stderr):
             received_message += chunk.decode('utf8')
             if len(chunk) < 16:
                 break
+
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
@@ -36,9 +37,6 @@ def client(msg, log_buffer=sys.stderr):
         sock.close()
 
         return received_message
-
-
-
 
 
 if __name__ == '__main__':

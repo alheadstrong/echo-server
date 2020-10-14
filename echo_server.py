@@ -52,6 +52,7 @@ def server(log_buffer=sys.stderr):
             print('quitting echo server', file=log_buffer)
             sock.close()
 
+
 if __name__ == '__main__':
     server()
     sys.exit(0)
